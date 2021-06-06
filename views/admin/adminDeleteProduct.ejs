@@ -1,0 +1,78 @@
+<div
+        id="main-wrapper"
+        data-layout="vertical"
+        data-navbarbg="skin5"
+        data-sidebartype="full"
+        data-sidebar-position="absolute"
+        data-header-position="absolute"
+        data-boxed-layout="full"
+      >
+        <AdminLeftMenu />
+        <AdminHeader />
+        <div className="page-wrapper">
+          <div className="page-breadcrumb">
+            <div className="row align-items-center">                       
+            </div>
+          </div>
+        
+          <div id="urunsil" className="row shadow">
+            <h3 class="text-center  btn-outline-primary d-flex align-items-center justify-content-center">ÜRÜN SİL</h3>
+            <main role="main" className="col  bg-white mt-3 p-3">
+              <table class="table">
+                <caption>Ürün Listesi</caption>
+                <thead>
+                  <tr>
+                   
+                    <th scope="col-sm-1">Başlık</th>
+                    <th scope="col-sm-1">İçerik</th>
+                    <th scope="col-sm-1">Proje Tipi</th>
+                    <th scope="col-sm-1">Proje Yeri</th>
+                    <th scope="col-sm-1">Müşteri</th>
+                    <th scope="col-sm-1">Resim 1</th>
+                    <th scope="col-sm-1">Resim 2</th>
+                    <th scope="col-sm-1">Resim 3</th>
+                    <th scope="col-sm-1">Resim 4</th>
+                  </tr>
+                </thead>
+              
+
+                <form action="/admin/api/urunsil" method="POST">
+                <%data.forEach(function(item){ %>
+                 
+                   
+                <tbody>
+                  
+                      <tr>
+                        
+                        <td  ><%=item.title %></td>
+                        <td ><%=item.content %></td>
+                        <td ><%=item.projeTipi %></td>
+                        <td ><%=item.projeYeri %></td>
+                        <td ><%=item.musteri %></td>
+                        <td  style="max-width: 15px;" class="overflow-auto"><%=item.resimler.bir %></td>
+                        <td ><%=item.resimler.iki %></td>
+                        <td ><%=item.resimler.uc %></td>
+                        <td ><%=item.resimler.dort %></td>
+                        <td>
+                          <button
+                            onClick=""
+                            id=""
+                            value="<%=item._id %>"
+                            name="id"
+                            type="submit"
+                            class="btn btn-danger"
+                          >
+                            Sil
+                          </button>
+                          
+                        </td>
+                      </tr>
+                  
+                </tbody>
+                <% }) %>
+              </form>
+              </table>
+            </main>
+          </div>
+        </div>
+      </div>

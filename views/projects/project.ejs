@@ -1,0 +1,269 @@
+<section id="projeler" class="plans bg-secondary">
+  <div class="section-header"><h2>Projeler</h2></div>
+
+  <div class="tab-content" id="pills-plan">
+    <div
+      class="tab-pane fade show active"
+      id="pills-apartman-plan"
+      role="tabpanel"
+    >
+      <div class="row g-3">
+        <!-- FOREACH BASLANGIC YERİ -->
+        <% data.forEach(function(item){ %>
+        <div
+          style="max-width: 200px"
+          class="
+            col-sm-4
+            shadow
+            rounded
+            border
+            d-flex
+            flex-wrap
+            align-items-center
+            justify-content-center
+            py-2
+            px-2
+            my-2
+            mx-4
+          "
+        >
+          <!-- Button trigger modal -->
+
+          <button
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#<%=item.projeYeri%>"
+          >
+            <div
+              class="
+                d-flex
+                flex-column
+                align-items-center
+                justify-content-center
+              "
+            >
+              <img
+                src="<%=item.resimler.bir%>"
+                alt="Rolling Roof"
+                class="rounded shadow"
+                style="max-height: 200px; max-width: 150px"
+              />
+              <div class="my-2 h5 w-75"><%=item.title%></div>
+            </div>
+          </button>
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="<%=item.projeYeri%>"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content" style="height: 70vh">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close bg-white"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body d-flex align-items-center">
+                  <div class="">
+                    <div class="row">
+                      <div class="col-md-4 d-flex flex-wrap">
+                        <div class="col-sm-12">
+                          <h3 class="text-center">İLGİLİ GÖRSELLER</h3>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <div
+                            class="
+                              d-flex
+                              align-items-center
+                              justify-content-center
+                              p-2
+                            "
+                          >
+                            <img
+                              height="200"
+                              width="100%"
+                              class="rounded"
+                              src="<%=item.resimler.bir%>"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div
+                            class="
+                              d-flex
+                              align-items-center
+                              justify-content-center
+                              p-2
+                            "
+                          >
+                            <img
+                              height="200"
+                              width="100%"
+                              class="rounded"
+                              src="<%=item.resimler.iki%>"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div
+                            class="
+                              d-flex
+                              align-items-center
+                              justify-content-center
+                              p-2
+                            "
+                          >
+                            <img
+                              height="200"
+                              width="100%"
+                              class="rounded"
+                              src="<%=item.resimler.uc%>"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <div
+                            class="
+                              d-flex
+                              align-items-center
+                              justify-content-center
+                              p-2
+                            "
+                          >
+                            <img
+                              height="200"
+                              width="100%"
+                              class="rounded"
+                              src="<%=item.resimler.dort%>"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 pt">
+                        <div class="col-sm-12">
+                          <strong
+                            class="text-center d-flex justify-content-center"
+                          >
+                            <%=item.title%>
+                          </strong>
+                          <p class="mt-5 icerik-yazi"><%=item.content%></p>
+                          <br />
+                          <p class="mt-3 icerik-yazi text-muted">PROJE YERİ:</p>
+                          <p><%=item.projeYeri%></p>
+                          <p class="mt-3 icerik-yazi text-muted">PROJE TİPİ:</p>
+                          <p><%=item.projeTipi%></p>
+                          <p class="mt-3 icerik-yazi text-muted">MÜŞTERİ:</p>
+                          <p><%=item.musteri%></p>
+                        </div>
+                      </div>
+                      <!-- KOPYANALAN YER -->
+                      <div class="col-md-4">
+                        <div
+                          class="
+                            col-sm-12
+                            d-flex
+                            flex-column
+                            align-items-center
+                            justify-content-center
+                            h-100
+                          "
+                        >
+                          <P class="my-3">PROJELENDİRME</P>
+                          <div class="progress w-75">
+                            <div
+                              class="
+                                progress-bar progress-bar-striped
+                                bg-danger
+                              "
+                              role="progressbar"
+                              style="width: 100%"
+                              aria-valuenow="50"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            >
+                              <span
+                                class="progress-bar-tooltip"
+                                style="opacity: 1"
+                              >
+                                <strong class="vc_label_units"
+                                  >100%</strong
+                                ></span
+                              >
+                            </div>
+                          </div>
+
+                          <P class="my-3">UYGULAMA </P>
+                          <div class="progress w-75 my-2">
+                            <div
+                              class="
+                                progress-bar progress-bar-striped
+                                bg-danger
+                              "
+                              role="progressbar"
+                              style="width: 100%"
+                              aria-valuenow="50"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            >
+                              <span
+                                class="progress-bar-tooltip"
+                                style="opacity: 1"
+                              >
+                                <strong class="vc_label_units"
+                                  >100%</strong
+                                ></span
+                              >
+                            </div>
+                          </div>
+                          <P class="my-3">PROJE TAMAMLANDI </P>
+                          <div class="progress w-75 my-2">
+                            <div
+                              class="
+                                progress-bar progress-bar-striped
+                                bg-danger
+                              "
+                              role="progressbar"
+                              style="width: 100%"
+                              aria-valuenow="50"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            >
+                              <span
+                                class="progress-bar-tooltip"
+                                style="opacity: 1"
+                              >
+                                <strong class="vc_label_units"
+                                  >100%</strong
+                                ></span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+        <!-- FOREACH BİTİŞ YERİ -->
+      </div>
+    </div>
+  </div>
+</section>

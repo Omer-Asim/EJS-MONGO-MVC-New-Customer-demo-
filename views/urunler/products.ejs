@@ -1,0 +1,44 @@
+<section id="urunler" class="gallery">
+  <div class="section-header"><h2>Ürünler</h2></div>
+
+  <nav
+    class="nav nav-pills justify-content-center flex-column flex-sm-row"
+    role="tablist"
+  >
+    <button
+      class="nav-link active"
+      id="pergola-tab"
+      data-bs-toggle="pill"
+      data-bs-target="#pills-pergola-plan"
+      type="button"
+      role="tab"
+    >
+      Pergola
+    </button>
+    <button
+      class="nav-link"
+      id="cam-tab"
+      data-bs-toggle="pill"
+      data-bs-target="#pills-cam-plan"
+      type="button"
+      role="tab"
+    >
+      Cam
+    </button>
+    <button
+      class="nav-link"
+      id="zip-perde-tab"
+      data-bs-toggle="pill"
+      data-bs-target="#pills-zip-plan"
+      type="button"
+      role="tab"
+    >
+      Zip Perde
+    </button>
+  </nav>
+
+  <div class="tab-content" id="pills-ürünler">
+    <%- include('pergola'); -%> <%- include('cam'); -%> <%- include('zipperde');
+    -%>
+  </div>
+</section>

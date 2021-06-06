@@ -1,0 +1,95 @@
+<section class="contact-form">
+  <h5>iLETİŞİME GEÇİN</h5>
+
+  <div class="contact-items">
+    <a
+      href="https://wa.me/905326784791"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Whatsapp"
+      target="_blank"
+      ><i class="fab fa-whatsapp"></i
+    ></a>
+    <a
+      href="tel:905326784791"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Bizi Arayın"
+      ><i class="fas fa-phone"></i
+    ></a>
+    <a
+      href="#"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="Online Chat"
+      ><i class="fas fa-comment-dots"></i
+    ></a>
+  </div>
+
+  <form
+    id="my-form"
+    target="my-response-iframe"
+    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdyELbrQPeXeW8KUED_IeMceC8mXg_yvkoQMPZTbO9A71I96A/formResponse"
+    method="POST"
+  >
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control form-control-sm"
+        id="name"
+        placeholder="Ad Soyad"
+        autocomplete="off"
+        required
+        name="entry.2005620554"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control form-control-sm"
+        id="email"
+        placeholder="Eposta adresiniz"
+        autocomplete="off"
+        required
+        name="entry.1045781291"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control form-control-sm"
+        id="phone"
+        placeholder="Telefon"
+        autocomplete="off"
+        required
+        name="entry.1166974658"
+      />
+    </div>
+    <div class="mb-3">
+      <textarea
+        class="form-control form-control-sm"
+        placeholder="Mesajınız"
+        id="message"
+        name="entry.839337160"
+      ></textarea>
+    </div>
+    <button type="submit" name="submit" class="btn btn-primary">
+      <i class="fas fa-paper-plane"></i> Gönder
+    </button>
+    <!-- Alert Message -->
+    <div class="col-lg-12" id="alertmsg" style="display: none">
+      <div class="alert-success mt-2 p-2 rounded">
+        <strong>Teşekkürler </strong> ,mesajınız gönderildi.
+      </div>
+    </div>
+  </form>
+  <iframe
+    class="invisible"
+    id="my-response-iframe"
+    name="my-response-iframe"
+    height="1"
+  ></iframe>
+  <div class="project-info-buttons">
+    <a href="#"><i class="fas fa-book"></i><br />Katalog</a>
+  </div>
+</section>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Çoşkun Pergola Sistemleri</title>
+    <meta name="description" content="Çoşkun Pergola Sistemleri" />
+    <!-- FONT  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICON FILES -->
+    <link
+      href="../img/ico/apple-touch-icon-270-precomposed.png"
+      rel="apple-touch-icon"
+      sizes="270x270"
+    />
+    <link
+      href="../img/ico/apple-touch-icon-144-precomposed.png"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+    <link
+      href="../img/ico/apple-touch-icon-114-precomposed.png"
+      rel="apple-touch-icon"
+      sizes="114x114"
+    />
+    <link
+      href="../img/ico/apple-touch-icon-72-precomposed.png"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="../img/ico/apple-touch-icon-57-precomposed.png"
+      rel="apple-touch-icon"
+    />
+    <link href="../img/ico/favicon.png" rel="icon" type="image/x-icon" />
+
+    <meta
+      property="og:title"
+      content="Yunusoğlu Veranda | İzmir Güzelbahçe Villa Projesi"
+    />
+    <meta
+      property="og:description"
+      content="Yunusoğlu İnşaat konut projeleri, inşaat projeleri ve villa projelerinde yılların tecrübesiyle kente kimlik katan yaşam alanları üretmektedir."
+    />
+    <meta
+      property="og:image"
+      content="http://websitesi.com/assets/img/izmir-guzelbahce-villa-verand-social-media.jpg"
+    />
+    <meta property="og:url" content="http://websitesi.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- CSS DOCUMENT -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style></style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#main-navbar" id="home">
+    <!-- NAVBAR -->
+
+    <%- include('header'); -%>
+
+    <!-- CAROUSEL -->
+
+    <%- include('crousel'); -%>
+
+    <!-- CONTACT -->
+
+    <%- include('contact'); -%>
+
+    <main>
+      <!-- ABOUT -->
+
+      <%- include('bizkimiz'); -%>
+
+      <!-- PRODUCT -->
+
+      <%- include('urunler/products'); -%>
+
+      <!-- PROJECT -->
+
+      <%- include('projects/project'); -%>
+
+      <!-- MAP -->
+
+      <%- include('googleMap'); -%>
+    </main>
+
+    <%- include('footer'); -%>
+  </body>
+</html>

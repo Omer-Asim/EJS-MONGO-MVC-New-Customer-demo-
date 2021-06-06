@@ -1,0 +1,172 @@
+<div class="page-wrapper">
+  <div class="page-breadcrumb">
+    <div class="row align-items-center">
+      <div class="col-5">
+        <h4 class="page-title">Yeni Proje Ekle</h4>
+        <div class="d-flex align-items-center">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/admin/anasayfa">Anasayfa</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Yeni Proje Ekle
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <div class="col-7"></div>
+    </div>
+  </div>
+  <div class="row">
+    <main role="main" class="col pt-3">
+      <div class="p-3">
+        <!-- FORM BAŞLANIGIC -->
+        <form
+          action="/admin/proje/ekle"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="row">
+            <div class="col-md-8">
+              <div class="row mb-2">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="title"
+                    placeholder="Başlık"
+                    id="title"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    type="text"
+                    step="0.01"
+                    name="projeTipi"
+                    placeholder="projeTipi"
+                    id="projeTipi"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    type="text"
+                    step="0.01"
+                    name="projeYeri"
+                    placeholder="projeYeri"
+                    id="projeYeri"
+                    required
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    class="form-control"
+                    type="text"
+                    step="0.01"
+                    name="musteri"
+                    placeholder="musteri"
+                    id="musteri"
+                    required
+                  />
+                </div>
+              </div>
+
+              <textarea
+                placeholder="Açıklama"
+                class="form-control mb-2"
+                name="content"
+                rows="3"
+                id="content"
+                required
+              ></textarea>
+
+              <hr class="p-0 mt-2" />
+            </div>
+            <div
+              class="
+                col-md-4
+                position-relative
+                p-2
+                bg-light
+                rounded
+                d-flex
+                align-content-between
+                flex-wrap
+              "
+            >
+              <div>
+                <strong>Resim Ekle</strong>
+                <div
+                  class="
+                    col
+                    form-control
+                    d-flex
+                    justify-content-center
+                    align-items-center
+                    mb-2
+                    p-2
+                  "
+                >
+                  <input
+                    class="pl-2 w-100"
+                    name="dosya"
+                    id="dosya"
+                    type="file"
+                    multiple="multiple"
+                    accept="image/*"
+                    required
+                  />
+                </div>
+              </div>
+              <div id="alert" class="alert alert-danger d-none" role="alert">
+                <strong>En fazla 4 adet resim yükleyebilirsiniz !</strong>
+              </div>
+              <div id="success" class="alert alert-info d-none" role="alert">
+                <strong id="content2"></strong>
+              </div>
+              <div class="w-100">
+                <input
+                  class="w-100 btn btn-info mb-2"
+                  type="submit"
+                  value="Ekle"
+                  id="imageinput"
+                  disabled
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+</div>
+<script>
+  var resimler = document.getElementById("dosya");
+  var imageinput = document.getElementById("imageinput");
+  var alert = document.getElementById("alert");
+  var content2 = document.getElementById("content2");
+  var deneme11 = document.getElementById("deneme11");
+
+  resimler.addEventListener("change", function (e) {
+    if (e.target.files.length > 4) {
+      alert.classList.remove("d-none");
+      imageinput.disabled = true;
+      success.classList.add("d-none");
+    } else {
+      imageinput.disabled = false;
+      alert.classList.add("d-none");
+      success.classList.remove("d-none");
+      content2.innerHTML = `${e.target.files.length} Adet Resim Başılı Bir Şekilde Seçilmiştir`;
+    }
+    e.preventDefault();
+  });
+</script>

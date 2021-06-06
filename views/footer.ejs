@@ -1,0 +1,56 @@
+<footer>
+  &copy; 2021
+  <a href="https://coskun-pergola.com" target="_blank">CoskunPergola</a> - Her
+  hakkı saklıdır.
+</footer>
+<!-- JS DOCUMENT -->
+<script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../lib/fslightbox/fslightbox.js"></script>
+<script>
+  var tooltipTriggerList = [].slice.call(
+    document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  );
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+</script>
+<script type="text/javascript">
+  document.getElementById("my-form").target = "my-response-iframe";
+  var iframe = document.getElementById("my-response-iframe");
+  var msg = document.getElementById("alertmsg");
+  msg.style.display = "none";
+
+  if (iframe) {
+    iframe.onload = function () {
+      document.getElementById("my-form").onsubmit = function () {
+        msg.style.display = "block";
+
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("message").value = "";
+      };
+      setTimeout(function () {
+        msg.style.display = "none";
+      }, 3000);
+    };
+  }
+
+  var bir = document.getElementById("bir");
+  var iki = document.getElementById("iki");
+  var uc = document.getElementById("uc");
+  var dort = document.getElementById("dort");
+  var bes = document.getElementById("bes");
+  function tiklandimi1() {
+    bir.src = iki.src;
+  }
+  function tiklandimi2() {
+    bir.src = üc.src;
+  }
+  function tiklandimi3() {
+    bir.src = dort.src;
+  }
+  function tiklandimi4() {
+    bir.src = bes.src;
+  }
+</script>
